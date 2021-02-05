@@ -83,8 +83,26 @@ p {
 
 .entete{
     grid-area: entete;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
+}
+.entete section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.entete section div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu{
@@ -107,19 +125,9 @@ p {
         }
     }
 
-.annonce2{
-    padding: 42px;
-    margin: 20px;
-    background-color: #efebc5;
-    color: #1c2127;
-    grid-area: annonce2;
-    section {
-        display : flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
 
-}
+
+
 .principal{
     display : grid;
     place-items: center;
