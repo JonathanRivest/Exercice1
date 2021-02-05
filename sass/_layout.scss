@@ -130,3 +130,23 @@ p {
     grid-area: pied-page;
     text-align: center;
 }
+
+img {
+    animation-name: animOpacite;
+    animation-duration: 4s;
+    transition: width 1s;
+}
+img:hover {
+    width: 101%;
+}
+
+
+@keyframes animOpacite {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
