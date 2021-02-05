@@ -34,29 +34,51 @@ mixins
   }
 }
 
+/*
 .animation div:nth-of-type(1) {
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
+  animation-delay: .5s;
 }
-
 .animation div:nth-of-type(2) {
+    animation-delay: 1s;
+}
+.animation div:nth-of-type(3) {
+    animation-delay: 1.5s;
+}
+.animation div:nth-of-type(4) {
+    animation-delay: 2s;
+}
+.animation div:nth-of-type(5) {
+    animation-delay: 2.5s;
+}
+*/
+.animation div:nth-of-type(1) {
+  width: 100%;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.animation div:nth-of-type(3) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-.animation div:nth-of-type(4) {
+.animation div:nth-of-type(2) {
+  width: 50%;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
+.animation div:nth-of-type(3) {
+  width: 33.33333%;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.animation div:nth-of-type(4) {
+  width: 25%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
 .animation div:nth-of-type(5) {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  width: 20%;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 /* ---------------------------------------
@@ -198,7 +220,7 @@ p {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
