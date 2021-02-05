@@ -1,3 +1,4 @@
+/* animation des cercles */
 .animation div {
       animation: anim-entete 1s both;
 ;}
@@ -34,3 +35,5 @@ $columns: 5;
         animation-delay: $i#{s};
     }
 }
+
+

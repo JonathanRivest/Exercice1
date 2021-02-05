@@ -139,9 +139,19 @@ p {
     text-align: center;
 }
 
+main{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+main h3 {
+    animation-name: animOpacite;
+    animation-duration: 3s;
+    transition: width 1s;
+}
+
 img {
     animation-name: animOpacite;
-    animation-duration: 4s;
+    animation-duration: 3s;
     transition: width 1s;
 }
 img:hover {
