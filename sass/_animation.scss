@@ -1,39 +1,61 @@
-/* animation des cercles */
-.animation div {
-      animation: anim-entete 1s both;
+/* animation de la nav du haut */
+.animationNav {
+    animation: anim-nav 0.25s both;
 ;}
 
-@keyframes anim-entete {
-    0% {transform: translateX(500px);}
+@keyframes anim-nav {
+  0% {transform: translateX(1000px);}
+  100% {
+      transform: translateX(0);
+  }
+}
+.animationNav:nth-of-type(1) {
+    animation-delay: .2s;
+  }
+.animationNav:nth-of-type(2) {
+      animation-delay: .4s;
+  }
+
+  /* animation des icônes du header */
+.animationIcone {
+    animation: anim-icone 0.25s both;
+;}
+
+@keyframes anim-icone {
+  0% {transform: scale(0);}
+  50% {
+      transform: scale(170%)
+  }
+  100% {
+      transform: scale(100%);
+  }
+}
+.animationIcone:nth-of-type(1) {
+    animation-delay: 1.2s;
+  }
+.animationIcone:nth-of-type(2) {
+      animation-delay: 1.4s;
+  }
+
+/* animation du menu de bas */
+.animationMenu {
+      animation: anim-menu 0.25s both;
+;}
+
+@keyframes anim-menu {
+    0% {transform: translateX(-1000px);}
     100% {
         transform: translateX(0);
     }
 }
 
-/*
-.animation div:nth-of-type(1) {
-  animation-delay: .5s;
+
+.animationMenu:nth-of-type(1) {
+  animation-delay: .6s;
 }
-.animation div:nth-of-type(2) {
+.animationMenu:nth-of-type(2) {
+    animation-delay: .8s;
+}
+.animationMenu:nth-of-type(3) {
     animation-delay: 1s;
 }
-.animation div:nth-of-type(3) {
-    animation-delay: 1.5s;
-}
-.animation div:nth-of-type(4) {
-    animation-delay: 2s;
-}
-.animation div:nth-of-type(5) {
-    animation-delay: 2.5s;
-}
-*/
-
-$columns: 5;
-@for $i from 1 through $columns {
-    .animation div:nth-of-type(#{$i}) {
-        width: (100% / $i);
-        animation-delay: $i#{s};
-    }
-}
-
-

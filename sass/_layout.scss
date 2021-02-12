@@ -16,7 +16,7 @@ body {
 
 body::after {
     content : "";
-    clip-path: polygon(0 0, 80% 0 , 50% 100% , 0 100%);
+    clip-path: polygon(0 0, 30% 0 , 70% 100% , 0 100%);
     //background-color: rgb(43, 71, 233);
     background-color: couleur(primaire);
     position: absolute;
@@ -62,30 +62,50 @@ p {
     display : grid;
     width: 80%;
     margin : 0 auto;
-    grid-gap : 20px;
+    grid-gap : 5px;
     grid-template-columns: 1fr 1fr 1fr;
 
     grid-template-areas: 
+        "nav nav nav"
         "entete entete entete"
         "menu menu menu"
-        "annonce1 annonce1 annonce1"
-        "principal principal principal"
+        "fenetre1 fenetre1 fenetre1"
+        "fenetre2 fenetre2 fenetre2"
+        "section section section"
         "pied-page pied-page pied-page";
         @include desktop    
         {
         grid-template-areas: 
+            "nav nav nav"
             "entete entete entete"
             "menu menu menu"
-            "principal annonce1 annonce1"
+            "section section fenetre1"
+            "section section fenetre2"
             "pied-page pied-page pied-page";
         }
+}
+
+.nav{
+    grid-area: nav;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+        h4 {
+            list-style: none;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+    
+
 }
 
 .entete{
     grid-area: entete;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
 }
 .entete section {
@@ -108,63 +128,37 @@ p {
 .menu{
     grid-area: menu;
     text-align: center;
-
-}
-.annonce1{
-    grid-area: annonce1;
-    background-color: #efebc5;
-    color: #5e6e81;
-    border-radius: 10px;
-    box-shadow: 7px 3px 11px 4px #757472;
-    padding: 42px;
-    margin: 20px;
-    div{
-        font-size: .4em;
-        display:flex;
-        align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+        h4 {
+            list-style: none;
+            margin-left: 15px;
+            font-size: 20px;
         }
-    }
+    
 
-
-
-
-.principal{
-    display : grid;
-    place-items: center;
-    grid-area: principal;
-    text-align: center;
 }
-.pied-page{
+
+section {
+grid-area: section;
+width: 100%;
+display: flex;
+div {
+    width: 100%
+}
+}
+
+.fenetre1 {
+    grid-area: fenetre1;
+}
+.fenetre2 {
+    grid-area: fenetre2;
+}
+
+.pied-page {
     grid-area: pied-page;
-    text-align: center;
-}
-
-main{
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-main h3 {
-    animation-name: animOpacite;
-    animation-duration: 3s;
-    transition: width 1s;
-}
-
-img {
-    animation-name: animOpacite;
-    animation-duration: 3s;
-    transition: width 1s;
-}
-img:hover {
-    width: 101%;
 }
 
 
-@keyframes animOpacite {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
