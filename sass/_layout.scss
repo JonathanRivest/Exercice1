@@ -60,7 +60,7 @@ p {
 
 .grille {
     display : grid;
-    width: 80%;
+    width: 90%;
     margin : 0 auto;
     grid-gap : 5px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -106,6 +106,9 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    h1 {
+        margin-top: 5px;
+    }
 
 }
 .entete section {
@@ -144,16 +147,36 @@ section {
 grid-area: section;
 width: 100%;
 display: flex;
-div {
-    width: 100%
+.haut {
+    display: flex;
 }
+ h3 {
+     margin-top: 30px;
+ }
+ p {
+     margin-right: 20px;
+     margin-left: 20px;
+     font-size: 18px;
+     padding-bottom: 25px;
+ }
+ img {
+     margin-left: 20px;
+ }
 }
 
 .fenetre1 {
     grid-area: fenetre1;
+    text-align: center;
+    img {
+        align-self: center;
+    }
 }
 .fenetre2 {
     grid-area: fenetre2;
+    text-align: center;
+    img {
+        align-self: center;
+    }
 }
 
 .pied-page {
